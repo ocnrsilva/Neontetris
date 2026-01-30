@@ -1,0 +1,7 @@
+{
+  "name": "Neon Pulse Tetris",
+  "description": "A modern, music-reactive Tetris-style game with neon cyber aesthetics, particle effects, and multi-platform responsive design.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

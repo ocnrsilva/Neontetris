@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#14192b"/>
+      <stop offset="60%" stop-color="#090c17"/>
+      <stop offset="100%" stop-color="#04050a"/>
+    </radialGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="neonGlowCyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neonGlowPurple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Block Gradients -->
+    <linearGradient id="cyanBlock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#70f8ff"/>
+      <stop offset="50%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#0088cc"/>
+    </linearGradient>
+
+    <linearGradient id="purpleBlock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f594ff"/>
+      <stop offset="50%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#86198f"/>
+    </linearGradient>
+
+    <linearGradient id="orangeBlock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+
+    <linearGradient id="greenBlock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#d946ef" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App Rounded Icon Container -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bgGrad)"/>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="none" stroke="url(#borderGrad)" stroke-width="2"/>
+
+  <!-- Matrix Grid Accent Lines -->
+  <path d="M 24 20 L 24 108 M 44 20 L 44 108 M 64 20 L 64 108 M 84 20 L 84 108 M 104 20 L 104 108" 
+        stroke="#1e293b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  <path d="M 20 28 L 108 28 M 20 48 L 108 48 M 20 68 L 108 68 M 20 88 L 108 88 M 20 108 L 108 108" 
+        stroke="#1e293b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+
+  <!-- Ambient Light Behind Active Pieces -->
+  <circle cx="64" cy="58" r="38" fill="#d946ef" opacity="0.22" filter="url(#neonGlowPurple)"/>
+  <circle cx="64" cy="74" r="32" fill="#00e5ff" opacity="0.25" filter="url(#neonGlowCyan)"/>
+
+  <!-- Iconic Tetromino Group: Glowing T-Piece hovering over stacked base -->
+  <!-- Base Foundation Block 1 (Orange L-part bottom left) -->
+  <g transform="translate(24, 76)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#orangeBlock)" stroke="#ffedd5" stroke-width="1.2" stroke-opacity="0.9"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.45"/>
+  </g>
+  <g transform="translate(48, 76)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#orangeBlock)" stroke="#ffedd5" stroke-width="1.2" stroke-opacity="0.9"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <!-- Base Foundation Block 2 (Green S-part bottom right) -->
+  <g transform="translate(72, 76)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#greenBlock)" stroke="#dcfce7" stroke-width="1.2" stroke-opacity="0.9"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.45"/>
+  </g>
+  <g transform="translate(96, 76)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#greenBlock)" stroke="#dcfce7" stroke-width="1.2" stroke-opacity="0.9"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <!-- Bottom cyan base line indicator -->
+  <line x1="22" y1="104" x2="106" y2="104" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" opacity="0.8" filter="url(#neonGlowCyan)"/>
+
+  <!-- HERO PIECE: Majestic Glowing Purple/Magenta T-Tetromino -->
+  <!-- T-Piece Top-Left -->
+  <g transform="translate(28, 26)" filter="url(#neonGlowPurple)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#purpleBlock)" stroke="#fae8ff" stroke-width="1.5"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <!-- T-Piece Top-Center -->
+  <g transform="translate(52, 26)" filter="url(#neonGlowPurple)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#purpleBlock)" stroke="#fae8ff" stroke-width="1.5"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <!-- T-Piece Top-Right -->
+  <g transform="translate(76, 26)" filter="url(#neonGlowPurple)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#purpleBlock)" stroke="#fae8ff" stroke-width="1.5"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <!-- T-Piece Stem Center (Descending / T-Spin ready) -->
+  <g transform="translate(52, 50)" filter="url(#neonGlowPurple)">
+    <rect x="2" y="2" width="22" height="22" rx="4" fill="url(#purpleBlock)" stroke="#fae8ff" stroke-width="1.5"/>
+    <rect x="5" y="5" width="16" height="5" rx="1.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- High-Tech Neon Spark / Corner Flares -->
+  <circle cx="78" cy="24" r="2.5" fill="#ffffff" filter="url(#neonGlowCyan)"/>
+  <circle cx="26" cy="102" r="2" fill="#00e5ff" filter="url(#neonGlowCyan)"/>
+  <circle cx="102" cy="102" r="2" fill="#d946ef" filter="url(#neonGlowPurple)"/>
+</svg>

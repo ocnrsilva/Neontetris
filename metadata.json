@@ -1,7 +1,8 @@
 {
-  "name": "Neon Pulse Tetris",
-  "description": "A modern, music-reactive Tetris-style game with neon cyber aesthetics, particle effects, and multi-platform responsive design.",
+  "name": "Neon Tetris",
+  "description": "High-performance modern competitive block stacker inspired by TETR.IO mechanics, with SRS+ wall-kicks, T-Spins, custom DAS/ARR handling, 7-bag randomizer, 40L Sprint, Blitz & Marathon modes.",
   "requestFramePermissions": [
     "microphone"
-  ]
+  ],
+  "majorCapabilities": []
 }

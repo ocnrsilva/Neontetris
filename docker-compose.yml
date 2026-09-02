@@ -1,0 +1,11 @@
+services:
+  neon-tetris:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: neon_tetris_app
+    restart: unless-stopped
+    ports:
+      - "3006:80"
+    environment:
+      - NODE_ENV=production

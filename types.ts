@@ -7,6 +7,12 @@ export interface Position {
   y: number;
 }
 
+export interface Tetromino {
+  shape: number[][];
+  color: string;
+  glowColor: string;
+}
+
 export interface TetrominoDef {
   type: TetrominoType;
   shapes: number[][][]; // 4 rotation shapes (0, 1, 2, 3)
